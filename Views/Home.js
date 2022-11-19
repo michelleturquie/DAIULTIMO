@@ -63,16 +63,20 @@ const Home = ({ navigation }) => {
       <View style={{ flexDirection: "row", marginTop: 60, justifyContent: "space-around" }}>
         <TouchableOpacity onPress={()=> navigation.navigate("HoraTemp")}>
           <Icon name="partly-sunny-outline" size={80} color="purple" />
+          <Text style={styles.titulo}>Hora y Clima</Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={()=> navigation.navigate("Contactos")}>
           <Icon2 name="contacts" size={75} color="purple" />
+          <Text style={styles.titulo}>Contactos</Text>
+
         </TouchableOpacity>
       </View>
 
       <View style={{ flexDirection: "row", marginTop: 60, justifyContent: "space-around" }}>
       <TouchableOpacity onPress={()=> navigation.navigate("NroEmergencia")}>
         <Icon5 name="asterisk" size={75} color="purple" />
+        <Text style={styles.titulo}>Nro NroEmergencia</Text>
       </TouchableOpacity>
 
       </View>
@@ -80,10 +84,12 @@ const Home = ({ navigation }) => {
       <View style={{ flexDirection: "row", marginTop: 60, justifyContent: "space-around" }}>
       <TouchableOpacity onPress={()=> navigation.navigate("Identificacion")}>
         <Icon name="people-outline" size={80} color="purple" />
+        <Text style={styles.titulo}>Identificacion QR</Text>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={()=> navigation.navigate("ImagenFondo")}>
         <Icon6 name="photo" size={70} color="purple" />
+        <Text style={styles.titulo}>Cambiar Fondo</Text>
       </TouchableOpacity>
       </View>
 
@@ -109,6 +115,12 @@ const styles = StyleSheet.create({
   },
   text2: {
     alignSelf: "center",
+    fontSize: 20,
+    fontWeight: "bold",
+
+  },
+  titulo: {
+    color: "#6A085F",
     fontSize: 20,
     fontWeight: "bold",
 
