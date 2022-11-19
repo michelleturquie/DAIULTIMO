@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, StatusBar, TouchableOpacity, Button, Linking, ImageBackground } from 'react-native'
+import { View, Image, Text, StyleSheet, StatusBar, TouchableOpacity, Button, Linking, ImageBackground } from 'react-native'
 import React, { useState, useEffect } from "react";
 import { Accelerometer } from "expo-sensors";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -54,9 +54,13 @@ const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" />
-      <Text style={styles.text}>Bienvenido!</Text>
 
-      <View style={{ flexDirection: "row", marginTop: 95, justifyContent: "space-around" }}>
+      <Text style={styles.text}>Bienvenido!👋</Text>
+      <Text style={styles.text2}>Trabajo realizado por:</Text>
+      <Text style={styles.text2}>Michelle y Barbara 5IA</Text>
+
+
+      <View style={{ flexDirection: "row", marginTop: 60, justifyContent: "space-around" }}>
         <TouchableOpacity onPress={()=> navigation.navigate("HoraTemp")}>
           <Icon name="partly-sunny-outline" size={80} color="purple" />
         </TouchableOpacity>
@@ -97,8 +101,15 @@ const styles = StyleSheet.create({
   },
   text: {
     marginTop: 90,
+    marginBottom: 10,
     alignSelf: "center",
     fontSize: 30,
+    fontWeight: "bold",
+
+  },
+  text2: {
+    alignSelf: "center",
+    fontSize: 20,
     fontWeight: "bold",
 
   },
